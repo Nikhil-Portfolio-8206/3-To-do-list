@@ -1,59 +1,75 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
 
-  h1 {
-    text-align: center;
-    text-decoration: underline;
-  }
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
 
-  input[type="text"] {
-      width: 80%;
-      padding: 1rem;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      outline: none;
-      font-size: large;
-  }
+input[type="text"] {
+  width: 80%;
+  padding: 1rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: large;
+}
 
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size:medium;
-    font-weight: bolder;
-  }
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bolder;
+}
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem;
-  }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+}
 
-  li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
 
-  .completed {
-    text-decoration: line-through;
-    margin:5px;
-  }
+.completed {
+  text-decoration: line-through;
+}
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.dragging {
+  opacity: 0.5;
+  background-color: #e0e0e0;
+}
+
+.placeholder {
+  height: 50px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
 }
