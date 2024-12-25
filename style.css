@@ -73,3 +73,13 @@ li {
   margin-bottom: 10px;
   background-color: #f9f9f9;
 }
+
+.delete-btn {
+  background-color: #FF6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: small;
+}

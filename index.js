@@ -9,8 +9,10 @@ const input = document.getElementById('taskInput');
         const taskText = input.value;
         if (taskText !== '') {
             const li = document.createElement('li');
-            li.textContent = taskText;
             li.draggable = true;
+
+            const taskContent = document.createElement('span');
+            taskContent.textContent = taskText;
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
@@ -22,7 +24,14 @@ const input = document.getElementById('taskInput');
                 }
             });
 
-            li.prepend(checkbox);
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.className = 'delete-btn';
+            deleteButton.addEventListener('click', () => {
+                list.removeChild(li);
+            });
+
+            li.append(checkbox, taskContent, deleteButton);
             list.appendChild(li);
 
             addDragAndDrop(li);
