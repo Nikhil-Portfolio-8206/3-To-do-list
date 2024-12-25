@@ -38,18 +38,23 @@ ul {
 }
 
 li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
 }
 
-.completed {
+li span {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 10px; /* Space between checkbox and text */
+}
+
+li.completed span {
   text-decoration: line-through;
 }
 

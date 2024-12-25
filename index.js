@@ -11,9 +11,6 @@ const input = document.getElementById('taskInput');
             const li = document.createElement('li');
             li.draggable = true;
 
-            const taskContent = document.createElement('span');
-            taskContent.textContent = taskText;
-
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.addEventListener('change', () => {
@@ -23,6 +20,9 @@ const input = document.getElementById('taskInput');
                     li.classList.remove('completed');
                 }
             });
+
+            const taskContent = document.createElement('span');
+            taskContent.textContent = taskText;
 
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
